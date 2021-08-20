@@ -2,8 +2,13 @@ package com.aihello.amazon.model;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL)
 public class Suggestions implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	String suggType;
 	String type;
 	String value;
@@ -17,6 +22,7 @@ public class Suggestions implements Serializable {
 	String blackListed;
 	String spellCorrected;
 	String xcatOnly;
+	String totalCount;
 
 	public String getSuggType() {
 		return suggType;
@@ -122,12 +128,24 @@ public class Suggestions implements Serializable {
 		this.xcatOnly = xcatOnly;
 	}
 
+	public String getTotalCount() {
+		return totalCount;
+	}
+
+	public void setTotalCount(String totalCount) {
+		this.totalCount = totalCount;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public String toString() {
 		return "Suggestions [suggType=" + suggType + ", type=" + type + ", value=" + value + ", refTag=" + refTag
 				+ ", candidateSources=" + candidateSources + ", strategyId=" + strategyId + ", prior=" + prior
 				+ ", ghost=" + ghost + ", help=" + help + ", fallback=" + fallback + ", blackListed=" + blackListed
-				+ ", spellCorrected=" + spellCorrected + ", xcatOnly=" + xcatOnly + "]";
+				+ ", spellCorrected=" + spellCorrected + ", xcatOnly=" + xcatOnly + ", totalCount=" + totalCount + "]";
 	}
 
 }

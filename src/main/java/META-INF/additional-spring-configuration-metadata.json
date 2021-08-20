@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "amazon.scrapper.metadata.url",
+    "type": "java.lang.String",
+    "description": "A description for 'amazon.scrapper.metadata.url'"
+  },
+  {
+    "name": "amazon.scrapper.keyword.url",
+    "type": "java.lang.String",
+    "description": "A description for 'amazon.scrapper.keyword.url'"
+  }
+]}

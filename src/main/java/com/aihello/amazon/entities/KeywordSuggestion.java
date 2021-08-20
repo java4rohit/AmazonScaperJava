@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 @Entity
 public class KeywordSuggestion {
 
@@ -16,7 +15,8 @@ public class KeywordSuggestion {
 	private String spellcorrected;
 	private String strategyid;
 	private String suggestionType;
-	
+	private String totalResultCount;
+
 	public int getId() {
 		return id;
 	}
@@ -62,5 +62,19 @@ public class KeywordSuggestion {
 		return this;
 	}
 
- 
+	public String getTotalResultCount() {
+		return totalResultCount;
+	}
+
+	public void setTotalResultCount(String totalResultCount) {
+		this.totalResultCount = totalResultCount;
+	}
+
+	@Override
+	public String toString() {
+		return "KeywordSuggestion [id=" + id + ", suggested_keyword=" + suggested_keyword + ", spellcorrected="
+				+ spellcorrected + ", strategyid=" + strategyid + ", suggestionType=" + suggestionType
+				+ ", totalResultCount=" + totalResultCount + "]";
+	}
+
 }

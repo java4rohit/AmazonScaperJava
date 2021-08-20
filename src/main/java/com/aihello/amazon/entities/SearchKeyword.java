@@ -21,7 +21,7 @@ public class SearchKeyword {
 	private Date date;
 
 	@OneToMany(cascade = CascadeType.ALL) 
-	@JoinColumn(name = "keywordsuggestion_Id", referencedColumnName = "id")
+	@JoinColumn(name = "keyword_Id", referencedColumnName = "id")
 	private List<KeywordSuggestion> keywordSuggestion;
 
 	public SearchKeyword() {
